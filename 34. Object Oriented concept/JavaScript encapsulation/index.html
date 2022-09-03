@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript OOps Encapsulation</title>
+
+    <style>
+        body{
+            height: 200vh;
+        }
+
+    </style>
+</head>
+
+<body>
+    <section class="scroll">
+    <h1 class="heading">Javascript OOps Encapsulation</h1>
+
+    </section>
+
+    <script>
+        // Javascript OOps Encapsulation
+
+
+        class Student{
+            constructor(){
+                var name;
+                var marks;
+            }
+            getName(){
+                return this.name;
+            }
+            setName(name){
+                this.name = name;
+            }
+            getMarks(){
+                return this.marks;
+            }
+            setMarks(marks){
+                this.marks= marks;
+            }
+        }
+        var stud = new Student();
+        stud.setName("Joeal");
+        stud.setMarks(230);
+        document.write(stud.getName() + " has secured " + stud.getMarks())
+    </script>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>

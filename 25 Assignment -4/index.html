@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>number Object</title>
+
+</head>
+
+<body>
+    <h1 class="heading">Assignment-4</h1>
+
+    <script>
+        var person = {
+            firtname: "Ajay",
+            lastname: "Nagar",
+            age: 23,
+        }
+        document.write(person.firtname + " " + person.lastname + " " + person.age)
+
+        // create array 
+
+        var emp = new Array(1,3,4,5,10,30, 40, 2, 49,400,500);
+        function check(val){
+            return val > 10;
+        }
+        var modify = emp.filter(check);
+        var max = Math.max.apply(null, modify);
+        document.write("<br> Grether then 4th position: " + modify)
+        document.write("<br> Max element from array: " + max)
+
+
+        // Q.3
+        var str = Array.of(  "This is LearnVearn  ");
+        
+        // add strting using spice
+        var addStr = str.splice(2,0,"LearnVearn");
+        console.log(str)
+        document.write("<br>" + str)
+
+        // remove string
+        var remove = str.splice(1,1,"d");
+        document.write("<br>"+ remove)
+        console.log(remove)
+        
+
+        // date
+        var time = new Date();
+        document.write(time);
+
+        // isNumer
+        var num = 'abc';
+        document.write(Number.isInteger(num))
+    </script>
+    <script src="./main.js"></script>
+</body>
+
+</html>

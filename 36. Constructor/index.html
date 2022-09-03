@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>constructor</title>
+
+</head>
+
+<body>
+    <h1 class="heading">constructor</h1>
+
+
+    <script>
+        // javascript classs
+        document.write("<h3>javascript Constructor</h3>")
+
+        // create Object of class 
+
+        // class Student{
+        //     constructor(){
+        //         this.id = 122;
+        //         this.name = "Suresh Prajapat";
+        //     }
+        // }
+        // var object = new Student();
+        // document.write(object.id+" "+object.name)
+        // console.log(object)
+        
+
+        // Using super keyword
+
+        // Parent Class
+        class CompanyName{
+            constructor(){
+                this.companyName = "LearnVern";
+            }
+        }
+
+        // child class
+        class emp extends CompanyName{
+            constructor(id, name){
+                super()
+                this.id =id;
+                this.name=name;
+            }
+        }
+
+    var ex = new emp(100, "AMit")
+
+    document.write(ex.id + " " + ex.name + " " + ex.companyName);
+
+
+
+
+
+    </script>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>

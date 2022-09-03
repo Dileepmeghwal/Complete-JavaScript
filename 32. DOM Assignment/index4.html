@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementsByTagName</title>
+</head>
+
+<body>
+
+    <!--getElementsByName  -->
+
+    <button onclick="count()">Click</button>
+    <p>This is a p tag</p>
+    <p>This is a p tag</p>
+    <p>This is a p tag</p>
+    <p>This is a p tag</p>
+
+    <script>
+        function count() {
+            var x = document.getElementsByTagName('p');
+            var y = document.getElementsByTagName("button");
+            alert("Total no of P: " + x.length + "Total no of input: " + y.length);
+        }
+
+    </script>
+</body>
+
+</html>

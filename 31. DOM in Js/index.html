@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+
+</head>
+
+<body>
+    <h1 class="heading">DOM</h1>
+
+
+
+    <form name="form1">
+        Enter Your Name:
+        <input type="text" name="myname">
+        <br>
+        <br>
+        <button type="button" onclick="showname()">Click</button>
+    </form>
+
+
+
+    <!-- Dom Methods-->
+
+    <form action="#">
+        My Phone No:
+        <input type="number" name="name" id="mynumber">
+        <button onclick="getNumber()">get Phone number</button>
+    </form>
+
+
+    <div class="forms">
+        <input type="text" name="name2" id="fetch">
+    </div>
+    <button onclick="dummy()">Click Dumyy</button>
+    <!-- getElementsByClassName -->
+
+    <div class="abc">
+        abc
+    </div>
+    <div class="abc">
+        abc
+    </div>
+    <div class="abc">
+        abc
+    </div>
+
+
+
+    <script>
+
+        function showname() {
+            var name = document.form1.myname.value;
+            alert("Congratulation! " + name);
+        }
+
+        // get phone number by getElementById
+        function getNumber() {
+            var number = document.getElementById('mynumber').value;
+            document.write("My Phone: " + number)
+        }
+
+        
+        function dummy(){
+            var x = document.forms.name2.value;
+            alert(x);
+        }
+        function dummy(){
+            var dom = document.getElementById('fetch').value;
+            alert(dom);
+        }
+    </script>
+    <script src="./main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date in js  </title>
+
+</head>
+
+<body>
+    <h1 class="heading">Date in js</h1>
+    
+    <!-- Date in js -->
+    <script>
+        // Date
+        var d = new Date();
+        document.write("Date: " + d)
+
+        // Date(year,month,day,hourse, minitus, milisecond);
+
+        var  ist = new Date(2018,11,12,12,45,45,0);
+        document.write("<br> Date(value): " + ist)
+
+        // DateString()
+        var d = new Date("October 14, 2014, 12:45:30");
+        document.write("<br> Date String: " + d);
+
+        // Date(minisecond)
+        var d = new Date(100000000)
+        document.write("<br> Date(milis): " + d);
+
+        // getDay
+        document.write("<br>" + d.getDay());
+
+        // getDate
+        var d = new Date();
+        document.write("<br>" + d.getDate());
+
+        // getYear
+        document.write("<br>Get Year:" + d.getUTCFullYear())
+
+        // getHours
+        document.write("<br>Get Hourse: " + d.getHours())
+
+        // getMilis
+        document.write("<br> Get miliseconds: " + d.getMilliseconds())
+
+        // getminitus
+        document.write("<br> Get Minutes:" + d.getMinutes())
+
+        // getMonth
+        document.write("<br> Get Months" + d.getTime())
+
+        // toDateStrnig()
+        document.write("<br> toDateString: " + d.toDateString())
+
+        // toString()
+        document.write("<br> toString: " + d.toString())
+
+        // toTimeString()
+        document.write("<br> toTimeString: " + d.toTimeString())
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+   
+
+
+    <script src="./main.js"></script>
+</body>
+
+</html>

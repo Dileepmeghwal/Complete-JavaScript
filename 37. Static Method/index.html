@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Method</title>
+
+</head>
+
+<body>
+    <h1 class="heading">Static Method</h1>
+
+
+    <script>
+        // javascript classs
+        document.write("<h3>Static Method</h3>")
+
+        // static method-1
+
+        // class Test{
+        //     static display(){
+        //         return "Hello Static class";
+        //     }
+        // }
+        // document.write(Test.display())
+
+        // Example:2
+        // We can create one and more static method-2 in a one class
+
+        // class Test{
+        //     static display1(){
+        //         return "Hello Static class 1";
+        //     }
+        //     static display2(){
+        //         return "Hello Static class 2";
+        //     }
+        //     static display3(){
+        //         return "Hello Static class 3";
+        //     }
+
+        // }
+        // document.write(Test.display1()+ "<br>")
+        // document.write(Test.display2()+ "<br>")
+        // document.write(Test.display3()+ "<br>")
+
+        // Example:3
+        // class Test1{
+        //     static display(){
+        //         return "Hello Static class 1";
+        //     }
+        //     static display(){
+        //         return "Hello Static class 2";
+        //     }
+        // }
+        // document.write(Test1.display())
+
+
+
+
+
+
+        // Example:4
+
+        // class Test{
+        //     constructor(){
+        //         document.write(Test.display()+ "<br>");
+        //         document.write(this.constuctor.display());
+
+        //     }
+        //     static display(){
+        //         return "A static methis 1 is called ";
+        //     }
+        // }
+        // var callTest = new Test();
+
+
+
+        // Example:5
+        class TEst {
+            static displayS(){
+                return "Static method called";
+            }
+            show(){
+                document.write(TEst.displayS()+ "" + "<br>")
+                return "No static Methods is called";
+            }
+        }
+        var t = new TEst();
+        t.show()
+    </script>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>

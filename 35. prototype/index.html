@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype</title>
+
+</head>
+
+<body>
+    <h1 class="heading">Prototype</h1>
+
+
+    <script>
+        // javascript classs
+        document.write("<h3>javascript classs</h3>")
+
+
+        /*javascript is a prototype-based language that facilitates
+         the objects to acuire properties ans features from one another.
+          here  each object contain a property object.
+
+          In js whenever a function is created the prototype peopery is added to that function automatically.
+           this property is a prototype object that holds
+           a constructor proprty.
+
+        Syntext:
+        ClassName.property.methodName
+        
+        */
+
+        // function Employee(firstnName, lastName) {
+        //     this.firstnName= firstnName;
+        //     this.lastName= lastName;
+        // }
+
+        // Employee.prototype.fullname = function(){
+        //     return this.firstnName + " " + this.lastName;
+        // }
+        // var emp1 = new Employee('Rahul', "Bose");
+        // var emp2 = new Employee('Manooj', "Sai");
+        // document.write(emp1.fullname())
+        // document.write("<br>"+emp2.fullname())
+        
+
+
+        function Students (name, rollno){
+            this.name = name;
+            this.rollno = rollno;
+        }
+        Students.prototype.fulldata = function(){
+            return this.name + " " + this.rollno + " " + this.company;
+        }
+        Students.prototype.company= "Urban Company";
+        
+
+        var std1 = new Students("Praven", 12002);
+        document.write(std1.fulldata())
+
+
+        // try
+
+        function college(cName, est){
+            this.cName=cName;
+            this.est=est;
+        }
+        // 
+        college.prototype.full = function(){
+            return this.cName+ " " +this.est+ " " +this.city;
+        }
+        // add propery
+        college.prototype.city = "Udaipr"
+        var c = new college("SS College of Engineering", 2007);
+        document.write(c.full())
+
+
+
+        function graaj(carName, Color){
+            this.carName=carName;
+            this.Color=Color;
+        }
+        graaj.prototype.model = "GT-100";
+        graaj.prototype.details = function(){
+            return this.carName + " It's " +this.Color+ " Model " +this.model;
+        }
+
+        var carData = new graaj("Mustang", "Black");
+        console.log(carData.model)
+        console.log(carData.details())
+        document.write("<br>"+ carData.details())
+
+
+
+
+        function Country(population, states){
+            this.population=population;
+            this.states=states;
+        }
+
+        Country.prototype.data = function(){
+            return this.population + " " + this.states;
+        }
+        
+        Country.prototype.primeMinister = "Narendra Modi";
+        
+
+        var newData = new Country("India", "Rajasthan");
+        console.log(newData.data())
+        console.log(newData.primeMinister)
+    </script>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>

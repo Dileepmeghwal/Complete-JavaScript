@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String and Methods</title>
+
+</head>
+
+<body>
+    <h1 class="heading">String and Methods</h1>
+    
+
+   <script>
+    // literal method to create string
+
+    var str1 = "Hello";
+    var str2 = "How are you ?";
+
+    document.write("Liiteral Method string: " + str1 + " " + str2)
+
+    // create string using (new Keyword)
+    document.write("<h2>String Using new Keywors:</h2>")
+    var str3 = new String("<br> I am Fine...");
+    document.write(str3);
+
+
+    // Methods in String
+
+    document.write("<h2>String Methods:</h2>")
+
+    // 1. charAt();
+    document.write("<h3>charAt</h3>")
+    var charA = str2.charAt(5);
+    document.write(charA)
+    document.write("<br>")
+
+     // 2. charCodeAt();
+     document.write("<h3>charCodeAt</h3>")
+     document.write("CharCode: " + str2.charCodeAt(3));
+
+     document.write("<br>")
+
+     // 2. concate();
+     document.write("<h3>concate</h3>")
+     document.write("concate: " + str1.concat(str2))
+
+    //  indexOf:
+    document.write("<br>")
+    document.write(str2.indexOf('r'));
+    document.write("<br>")
+    document.write(str2.indexOf('o', 3)); //also we can find 'o', 'o' value
+
+    // LastIndexOf:
+    document.write("<h3>LastIndexOf</h3>")
+    document.write(str2.lastIndexOf('r'))
+
+    // Search:
+    document.write("<br>")
+    document.write("<h3>Search</h3>")
+    var str4 = "We are learning javascript, Javascript is a wonderful scripting language,";
+    document.write(str4.search('javascript'));
+    document.write("<br>")
+    
+    document.write(str4.search('Javascript'));
+    document.write("<br>")
+    // if we want to remove case sensetivity
+    document.write(str4.search(/Javascript/i));
+
+
+    // match
+    document.write("<h3>Match</h3>")
+    document.write(str4.match('javascript'));
+
+    // replace
+    document.write("<h3>replace</h3>")
+    let text = 'hey';
+    let r = text.replace('hey', 'Hii');
+    document.write(r);
+    document.write("<br>")
+
+
+    // ignore replce
+
+    let markup = "HTML and HTML is the Markup Languages."
+    document.write(markup.replace(/HTML/gi, 'CSS'));
+
+
+    // substr
+    document.write("<h3>substring</h3>")
+    var str6 = "Hello";
+
+    document.write(str6.substr()) //from strting
+    document.write("<br>")
+    document.write(str6.substr(4))
+    document.write("<br>" + str6.substr(0,4))
+
+
+    // substring
+    document.write("<h3>substring</h3>")
+    
+    document.write("<br>" + str6.substring())
+    document.write("<br>" + str6.substring(4))
+    document.write("<br>" + str6.substring(0,2))
+
+    // Slice
+    document.write("<h3>slice</h3>")
+    document.write("<br>" + str6.slice())
+    document.write("<br>" + str6.slice(2))
+    document.write("<br>" + str6.slice(0,3))
+
+    // toLowercase
+    document.write("<h3>toLowercase</h3>")
+    var capse = 'HELOO SUNMI';
+    var low = 'hello jonny'
+    document.write(capse.toLowerCase())
+
+    // toLocalLowercase
+    document.write("<h3>toLocalLowercase</h3>")
+    document.write( capse.toLocaleLowerCase())
+
+     // toUppercase
+    document.write("<h3>toUpperCase</h3>")
+     document.write(low.toUpperCase())
+
+     // toLocalUppercase
+    document.write("<h3>toLocalUppercase</h3>")
+     document.write(low.toLocaleUpperCase())
+
+     // toString
+    document.write("<h3>toString</h3>")
+     document.write(low.toString())
+     console.log(low.toString())
+
+     // ValueOf
+    document.write("<h3>valuseOF</h3>")
+     document.write(low.valueOf('h'))
+
+     // split
+    document.write("<h3>split</h3>")
+     document.write(str2.split(" "))
+    
+
+    // trim(remove space left and right side)
+    document.write("<h3>trim</h3>")
+    var  spce = "             Hello I am Dileep Meghwal            ";
+     document.write(spce.trim())
+
+
+
+
+
+    let s = "Javascript is scripting language";
+    document.write(s.search('is'));
+
+    let numtext = "Hello29Dileep";
+    let modify = numtext.replace(29, ' ')
+    document.write("<br>" + numtext)
+    document.write("<br>" + modify)
+
+    let modify1 = numtext.slice(0, 3) ;
+    document.write("<br>" + modify1)
+
+    
+    // split practice
+    var fruit = "Apple is a costly fruit and healthy.";
+    var splitFruit = fruit.split(" ");
+    document.write("<br>"+splitFruit);
+
+    
+    var trimPrint = fruit.trim(" ")
+    document.write("<br>" + trimPrint)
+
+    document.write("<br>" + fruit.valueOf());
+    document.write("<br>" + fruit.indexOf('i'));
+    document.write("<br>" + fruit.match('rr'));
+    document.write("<br>" + fruit.replace('healthy', 'unhealthy'));
+    document.write("<br>" + fruit.search('costly'));
+    document.write("<br>" + fruit.valueOf());
+    document.write("<br>" + fruit.endsWith('.'));
+
+
+
+    var sortAlgo = [10,4,6,9, 12,23,50,3,1];
+    var dataSort = sortAlgo.sort(function(a,b){
+        return a-b;
+    });
+    document.write(dataSort)
+    
+    
+    var content = 'Hello123@$%#';
+    var remove = content.replace(/[0-9,@$%#]/gi, '')
+    
+    document.write(remove)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   </script>
+
+
+    <script src="./main.js"></script>
+</body>
+
+</html>

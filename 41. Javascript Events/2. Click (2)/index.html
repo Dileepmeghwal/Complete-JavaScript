@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript click</title>
+
+</head>
+
+<body>
+    <!-- <h1 class="heading">Javascript AddEventListner ()</h1> -->
+
+    <button onclick="show()">click</button>
+    <button id="show1">clikc</button>
+    <button id="show2">clikc</button>
+    <p id="text">This is p</p>
+    <p class="text1">This is p1</p>
+
+
+
+
+    <script>
+
+        // var btn = document.querySelector('#text');
+        // var btn = document.querySelectorAll('#text');
+
+        // console.log(btn)
+        
+        function show(){
+            document.body.style.backgroundColor = 'gold'
+        }
+
+        document.getElementById("show1").onclick = function() {
+            document.body.style.backgroundColor="pink";
+        }
+
+        document.getElementById('show2').addEventListener('click', chnageColor);
+        function chnageColor(){
+            document.body.style.backgroundColor = "black";
+        }
+        var text = document.getElementById('text');
+        var text1 = document.getElementsByClassName('text1');
+        text1 = text.className
+        console.log(text)
+        console.log(text1)
+       
+    </script>
+
+
+</body>
+
+</html>

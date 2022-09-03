@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+
+</head>
+
+<body>
+    <h1>Array Methods-3</h1>
+
+
+    <script>
+
+        document.write("<h2>Concate():</h2>");
+
+        const arr1 = ['C', 'C++', 'Python', 'Java','Java'];
+        const arr2 = ['HTML5', 'CSS3', "JavaScript", "Angular"];
+
+        //1 to perform every() method
+        const arr3 = [50, 35, 40, 55];
+
+        // Multi-diamentional array
+        const arr4 = [11, 12, [13, 14], 15, 16];
+
+        // flatMap
+        const arr5 = [2, 4, 6, 8, 10];
+
+        const dummy = ([123,4234,54,65]);
+
+        const dummy2 = {
+            id: 2,
+            fname: "sony"
+        }
+
+
+        //2 to perform every() method
+        function check(value) {
+            return value > 30;
+        }
+
+       
+
+        // include():
+        document.write("<h2>include():</h2>");
+
+        const include = arr1.includes("Java");
+        document.write(include);
+
+
+        // indexOf():
+        document.write("<h2>indexOf():</h2>");
+
+        const indexValue = arr1.indexOf("Java");
+        const indexValues = arr1.indexOf("JavaScript");
+
+        document.write(indexValue)
+        document.write(indexValues)
+
+        // isArray():
+        document.write("<h2>isArray():</h2>");
+
+        // const isArr = Array.isArray([1,2,3,4]);
+        const isArr = Array.isArray(dummy)
+        document.write(isArr)
+
+        // create object to check isArray or not
+        const ch =  Array.isArray(dummy2)
+        document.write(ch)
+
+        // join():
+        document.write("<h2>join():</h2>");
+
+        const join = arr1.join('- ');
+        document.write(join)
+
+
+        // Key():
+        document.write("<h2>key():</h2>");
+
+        const keyValues = arr1.keys();
+        document.write(keyValues+ "<br>")
+
+        for(x of keyValues){
+            document.write(x + "<br>")
+        }
+
+
+        // lastIndexOf():
+        document.write("<h2>lastIndexOf():</h2>");
+
+        const lastIndex = arr1.lastIndexOf("Java");
+        document.write(lastIndex)
+
+
+        // map():
+
+        document.write("<h2>map():</h2>");
+        const arr6 = [50, 45, 40,30,20];
+        const mapArray = arr6.map(x => x/5);
+        document.write(mapArray);
+
+
+
+
+
+    </script>
+
+
+    <script src="./main.js"></script>
+</body>
+
+</html>

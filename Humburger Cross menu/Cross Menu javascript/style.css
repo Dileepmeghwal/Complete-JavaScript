@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display&family=Inter:wght@400;500;600&family=Jost:wght@100;200;300;400;500;600;700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,300;1,400;1,700&family=Oswald:wght@700&family=Raleway:wght@100;200;300;400;500;600&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Jost", sans-serif;
+}
+header {
+  width: 100%;
+  min-height: 70px;
+  background-color: #000000;
+  align-items: center;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  top: 10px;
+  align-items: center;
+  padding: 0 24px;
+  max-width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+.nav-link {
+  transition: all 0.4s ease-in-out;
+  position: relative;
+  color: #fff;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #fff;
+  transition: all 0.3s ease-in;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.brnad-name {
+  font-family: "Bebas Neue", cursive;
+  font-size: 2rem;
+  color: #fff;
+}
+.humburger {
+  display: none;
+  cursor: pointer;
+}
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  display: block;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  margin: 5px auto;
+  position: relative;
+  top: 6px;
+  border-radius: 100px;
+}
+
+@media screen and (max-width: 768px) {
+  .humburger {
+    display: block;
+    border: 2px solid #fff;
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    transition: all .5s ease;
+  }
+  .humburger.active .bar:nth-child(2){
+    transform: translateX(-40px);
+    opacity: 0;
+  }
+  .humburger.active .bar:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+  }
+  .humburger.active .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .nav-menu {
+    position: fixed;
+    top: 70px;
+    gap: 0;
+    width: 50%;
+    flex-direction: column;
+    transition: all 0.23s ease-in-out;
+    right: -100%;
+    background-color: #000000;
+    text-align: center;
+  }
+  .nav-item {
+    margin: 16px 0;
+  }
+  .nav-link{
+    line-height: 70px;
+  }
+  .nav-menu.active {
+    right: 0;
+  }
+}

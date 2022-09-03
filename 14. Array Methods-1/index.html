@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+
+</head>
+
+<body>
+    <h1>Array Methods-1</h1>
+
+
+    <script>
+
+        document.write("<h2>Concate():</h2>");
+
+        const arr1 = ['C', 'C++', 'Python', 'Java', 'Java'];
+        const arr2 = ['HTML5', 'CSS3', "JavaScript", "Angular"];
+
+        //1 to perform every() method
+        const arr3 = [50, 35, 40, 55];
+
+        // Multi-diamentional array
+        const arr4 = [11, 12, [13, 14], 15, 16];
+
+        // flatMap
+        const arr5 = [2, 4, 6, 8, 10];
+
+        const dummy = ([123, 4234, 54, 65]);
+
+        const dummy2 = {
+            id: 2,
+            fname: "sony"
+        }
+
+
+        //2 to perform every() method
+        function check(value) {
+            return value > 30;
+        }
+
+
+        // Concate()
+        const concateArray = arr1.concat(arr2);
+
+        document.write("Array: " + arr1 + "<br>")
+        document.write("Concated array: " + concateArray);
+
+
+        // Copywithin
+        document.write("<h2>Copywithin():</h2>");
+
+        const Copy = arr2.copyWithin(0, 2, 4);
+        document.write("Copyed: " + Copy)
+
+
+        // entries()
+        document.write("<h2>entries():</h2>");
+
+        const entry = arr1.entries()
+        for (value of entry) {
+            document.writeln(value + "<br>")
+        }
+
+
+        // every()
+        document.write("<h2>every():</h2>");
+
+        document.write("Check every method:  " + arr3.every(check));
+
+
+        // flate()
+        document.write("<h2>flat():</h2>");
+        const flateMethod = arr4.flat();
+
+        document.write("Check flate method:  " + flateMethod);
+
+
+
+        // FlateMap()
+
+        document.write("<h2>flatMap():</h2>");
+
+        const mapping = arr5.flatMap(x => [x / 2]);
+        document.writeln("flateMap: " + mapping)
+
+
+
+
+        // concate()
+        const list1 = ['banana', 'apple', 'grapes', 'dates'];
+        const list2 = ['Pinapple', 'Cherry'];
+
+        const concateList = list1.concat(list2)
+        document.write(concateList + "<br>");
+        document.write(list1 + "<br>");
+
+        // copywithin()
+
+        const copye = list1.copyWithin(0, 2, 3);
+        document.write(copye + "<br>")
+
+
+        // entries
+        const entries2 = list1.entries();
+        for (x of entries2) {
+            document.write(x + "<br>")
+        }
+
+        // every for check every value
+
+        const digit = [4, 35, 45, 55, 65];
+
+        function checkDigit(d) {
+            return d > 35;
+        }
+
+        document.write(digit.every(checkDigit));
+
+
+        // flat
+        document.write("<br>")
+
+        const MultiDiamentional = [1, 3, [34, 35], [3, 4]];
+        const add = MultiDiamentional.flat();
+        document.write(add)
+
+        // flatMap
+
+        document.write("<br>")
+        const flatmap = digit.flatMap(x => x * 2);
+        document.write(flatmap)
+
+
+
+        const cotch = arr1.concat(arr2);
+        document.write(cotch);
+
+        const dataCheck = [12, 23, 34, 56];
+
+        function know(ele) {
+            return ele > 12;
+        }
+
+        document.write(dataCheck.every(know));
+
+
+
+
+        // concate
+        var delivary = ['Zomato', 'Swiggy', 'Macdonals', 'PizzaHut', 'Starbucks']
+        var transport = ['ola', 'uber', 'text']
+        var c = delivary.concat(transport)
+        console.log(c)
+
+        var mx = delivary.copyWithin(0, 2, 4);
+        console.log(mx)
+
+        var e = ['ola', 'uber', 'texi']
+
+        var e1 = e.entries();
+
+        for (x of e1) {
+            console.log(x)
+            document.write("<br>" + x)
+        }
+
+
+
+        var num = [1, 2, 3, 4, 5, 6]
+        num.entries();
+        for (x in num) {
+            document.write("<br>" + num[x])
+        }
+
+        const language = ['C', 'C++', 'Python', 'Java', 'Java'];
+        const v = language.entries();
+        for (value of v) {
+            console.log(value)
+        }
+
+
+        //every
+        // var str = ['abc','cde','fghi']
+        var number = [31, 50, 34, 55, 60]
+
+        function numCheck(number) {
+            return number > 31;
+        }
+        document.write(number.every(numCheck))
+        console.log(number.every(numCheck))
+
+        // flat
+        var f = ['fray','hotcoffee',['book,study',['pink','red']]]
+        console.log(f.flat())
+        document.write("<br>"+f.flat())
+
+        // flatmap
+        var str = ['apple','annar','kela','aam']
+        console.log(str.flatMap(x => x.charAt([0])))
+        document.write(str.flatMap(x => x.fontcolor("cyan")));
+
+        var d = [10,20,30,40,50]
+        console.log(d.flatMap(x=> x>10))
+        console.log(d.flatMap(x1=> x1/10))
+        console.log(d.flatMap(x=> x.toExponential(10)))
+
+        var x = d.map(x=> x*3)
+        console.log(x)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+    <script src="./main.js"></script>
+</body>
+
+</html>

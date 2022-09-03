@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirm Passwaord Validation</title>
+
+</head>
+
+<body>
+    <h1 class="heading">Confirm Passwaord Validation</h1>
+
+
+    <form action="#" name="myForm" onsubmit="validateForm()">
+       Phone: <input type="text" name="number" id="">
+       <span id="phone"></span>
+       <br><br>
+        <button type="submit">Submit</button>
+    </form>
+
+
+
+
+
+
+    <script>
+        function validateForm() {
+            var number = document.myForm.number.value;
+            if(isNaN(number)){
+                document.getElementById('phone').innerHTML = "Plese enter correct number";
+                return false;
+            }else{
+                document.getElementById("phone").innerHTML = "Vaildate";
+                return true
+            }
+        }
+    </script>
+    <script src="./main.js"></script>
+</body>
+
+</html>

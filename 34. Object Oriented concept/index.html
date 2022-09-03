@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Oriented Concept</title>
+
+</head>
+
+<body>
+    <h1 class="heading">Object Oriented Concept</h1>
+
+
+    <script>
+        // javascript classs
+        document.write("<h3>javascript classs</h3>")
+
+
+        // class Declaration
+        class employee {
+            constructor(id, name) {
+                this.id = id;
+                this.name = name;
+            }
+
+            details() {
+                document.write(this.id + " " + this.name + "<br>");
+            }
+        }
+
+        var object1 = new employee(23, "Raja");
+        object1.details();
+        console.log(object1);
+
+
+
+        // a = 10;
+        // var a;
+        // console.log(a)
+
+
+
+        // function object constructor
+        // function emp(id, name){
+        //     this.id = id;
+        //     this.name = name;
+        // }
+        // var e = new emp(12, "Disha");
+        // console.log(e)
+
+
+
+
+
+
+
+        // class Expression
+        var abc = class {
+            constructor(id, name) {
+                this.id = 12;
+                this.name = "Dhanaj";
+            }
+            data() {
+                document.write(this.id, + " " + this.name + "<br>")
+            }
+        }
+
+        var x = new abc()
+        x.data();
+
+
+
+
+
+        // re-declaration
+        var abc = class {
+            constructor(id, name) {
+                this.id = 122;
+                this.name = "Dipika";
+            }
+            data() {
+                document.write(this.id, + " " + this.name + "<br>")
+            }
+        }
+
+        var x = new abc()
+        x.data();
+
+
+        // name class
+
+        // var Emp = class Music{
+        //     constructor(song, singer){
+        //         this.song=song;
+        //         this.singer=singer;
+        //     }
+        //     // fetch(){
+        //     //     document.write(this.song +" "+ this.singer)
+        //     // }
+        // }
+        // // var x = new song("Teri meri yari", "arijit singh");
+
+        // document.write(Emp.song)
+        // document.write(Music.song)
+
+
+        let names = {
+            fname: "Dillion",
+            lname: "Megida",
+        }
+        console.log(names.fname)
+        console.log(names.hasOwnProperty("mname"));
+
+
+
+
+
+        // var year = prompt(parseInt("Enter year"));
+        // if(year%4== 0 || year%400==0 || year%100==0){
+        //     document.write("Leap year");
+        // }else{
+        //     document.write("Not a leap year")
+        // }
+
+    </script>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>

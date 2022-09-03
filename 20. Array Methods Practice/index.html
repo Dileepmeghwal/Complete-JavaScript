@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods Practice</title>
+
+</head>
+
+<body>
+    <h1>Array Methods Practice</h1>
+
+    
+    <script>
+        // 1 concate
+
+        const arr1 = ['HTML', 'CSS', 'Js', 'Bootstrap'];
+        const arr2 = ['SaSS', 'Java', 'Angular', 'React JS'];
+
+        const concate = arr1.concat(arr2);
+        document.write("Concated array: "+concate);
+        document.write("<br>");
+
+
+        // copyWithin
+        // array.copyWithin(target, start, end)
+        document.write("<br>");
+
+
+        const copy = arr1.copyWithin(3, 0, 3);
+        document.write("copied: " + copy)
+
+        // entries
+        document.write("<br>");
+        document.write("<br>");
+
+
+        const entries = arr2.entries();
+        for (x of entries) {
+            document.write(x + "<br>");
+        }
+
+        // every(it check all value and retun)
+        document.write("<br>");
+        document.write("<br>");
+
+        const arr3 = [20, 30, 40, 45, 50];
+
+        function check(val) {
+            return val > 40;
+        }
+        const everyM = arr3.every(check);
+        document.write("every: " +everyM)
+
+        // Flate()
+        document.write("<br>");
+        document.write("<br>");
+        const multi = [12, 14, [13, 15], 13, 14, [2, 4]]
+        const f = multi.flat();
+        document.write(f);
+        console.log(f)
+
+        // Flapmap
+        document.write("<br>");
+        document.write("<br>");
+        const fltMap = arr3.flatMap(x => [x / 2]);
+        document.write(fltMap);
+
+        // fill (Replace Value)
+        document.write("<br>");
+        document.write("<br>");
+        const addFill = ['React', 'Veu', 'angular'];
+        const fill = addFill.fill('Python', 1, 2);
+        document.write(fill)
+
+        // from (Replace Value of all aray)
+        document.write("<br>");
+
+        const fromValue = Array.from("Hello");
+        document.write(fromValue)
+        console.log(fromValue)
+
+        // filter
+        document.write("<br>");
+        const price = [100, 200, 300, 400, 500];
+        function filt(amount) {
+            return amount > 100;
+        }
+        document.write(price.filter(filt))
+
+        // find
+        document.write("<br>");
+
+
+        const a = price.find(x => x > 200);
+        document.write(a)
+
+        
+        // findIndex Value
+        document.write("<br>");
+        const ram = [10, 20, 30, 40, 50];
+        const $ram = ram.findIndex(e => e > 30);
+        document.write("FindIndex: " + $ram);
+
+
+        // forEach
+        document.write("<br>");
+
+        const call = ram.forEach(function sum(a) {
+            document.write(a + "<br>")
+        });
+
+
+
+
+        // include
+        document.write("<br>")
+        const arr_1 = ['C', 'C++', 'Python', 'Java', 'Java'];
+        const arr_2 = ['HTML5', 'CSS3', "JavaScript", "Angular"];
+
+
+        const add = arr_1.includes("Python");
+        document.write(add);
+
+        // indexOf
+        document.write("<br>")
+
+        const index = arr_1.indexOf('Python');
+
+        // const index = arr_1.findIndex(x => x>'Pyhton');
+        document.write(index)
+
+        // isArray
+        document.write("<br>")
+
+        const o = { id: 1, names: "Abc", code: 'java' };
+        const p = Array.isArray(o);
+        document.write(p)
+
+        // join
+        document.write("<br>")
+        document.write(arr_1.join(" * "));
+
+        // key
+        document.write("<br>")
+
+        const keyCheck = ['apple', 'dell', 'hp', 'acer', 'lenevo'];
+        const k = keyCheck.keys();
+        for (num of k) {
+            document.write("<br>" + num)
+        }
+
+        // lastIndex
+        document.write("<br>")
+        const l = keyCheck.lastIndexOf('dell');
+        document.write(l)
+
+        // map
+        document.write("<br>")
+        const newMap = [10, 20, 30, 40, 50];
+        const m = newMap.map(x=> x/2);
+        document.write("Map: "+m)
+
+        document.write("<br>")
+
+        const police = ['Rajasthan', 'Maharastra', 'Mumbai', 'Up'];
+        const newPolice = police.map((e) =>(
+            document.write(e)
+        ));
+        document.write(newPolice[x])
+        
+        // Of(it create string into array)
+        document.write("<br>")
+        document.write(Array.of('Hello', 1,2));
+        console.log(Array.of('Hello', 1,2))
+
+        // push
+        document.write("<br>")
+        const arr4 = [10, 20, 30, 40,40];
+        arr4.push(200);
+        document.write(arr4)
+
+        // pop
+        document.write("<br>")
+        arr4.pop(40);
+        document.write(arr4)
+
+        // reverse
+        document.write("<br>")
+        arr4.reverse()
+        document.write(arr4)
+
+        // reduce(it perform to all array value in once)
+        document.write("<br>")
+        const arr5 = [10, 20, 30, 40, 50];
+        const reducer = arr5.reduce(function(initial, current){
+            return initial + current;
+        })
+        document.write("Reducer: " + reducer)
+
+        // Some
+        document.write("<br>")
+        function sorted(args){
+            return args > 100;
+        }
+        const s = arr5.some(sorted);
+
+        document.write("some method: "+s)
+
+        // Shift(shift method remove the first element fro arr and print value)
+        document.write("<br>")
+
+        var arr6 = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+        document.write("Shift Value: " + arr6.shift());
+
+        // slice( method returns selected elements in an array, as a new array.)
+        document.write("<br>")
+        var sliceElem = arr6.slice(1,4);
+        document.write("Slice: "+ sliceElem)
+
+        // Sort(sorts the elements as strings in alphabetical and ascending order.)
+        document.write("<br>")
+        var count = [10,3,5,63,30]
+        var arr6 = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+
+        document.write(count.sort()+ " " + Math.min.apply(null, count))
+        document.write("<br>")
+
+        document.write("Sort: " + arr6.sort())
+        document.write("<br>")
+
+
+        // splice
+        // array.splice(index, delete, item1, ....., itemX)
+        // add operation in splice
+        document.write("<br>")
+        var week = ["Monday", "Tue", "Thu", "Fri", "Sat"];
+        document.write("Add WED: " + week.splice(2, 0, 'Wed'));
+        document.write(week)
+        document.write("<br>")
+
+        // delete operation in splice
+        var weeks = ["Monday", "Tue","Wed", "Thu", "Fri", "Sat"];
+
+        var  deleteDay = weeks.splice(0,1);
+        document.write("<br>")
+
+        document.write(deleteDay)
+        document.write("<br>")
+        document.write(weeks)
+        
+        // toLocalString
+
+        var bob = ['a','b','c','d']
+        var str = bob.toLocaleString();
+        document.write(str)
+        console.log(str)
+
+        // unhift()it add value at begining
+        document.write("<br>")
+
+        const counts = [2,4,5,6,7]
+        const ant = counts.unshift(10) //it add value at begining
+        document.write("Unshift: " + counts)
+
+        // value 
+         document.write("<h2>value():</h2>");
+
+        const ans = ['ajay','bunny', 'cherry', 'dom']
+        const v= ans.values()
+        // document.write(v)
+        // console.log(v)
+        for(val of ans){
+            document.writeln(val + "<br>")
+        }
+
+
+
+
+
+    </script>
+
+
+    <script src="./main.js"></script>
+</body>
+
+</html>

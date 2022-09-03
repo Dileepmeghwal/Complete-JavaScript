@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirm Passwaord Validation</title>
+
+</head>
+
+<body>
+    <h1 class="heading">Confirm Passwaord Validation</h1>
+
+
+    <form action="#" name="myForm" onsubmit="validateForm()">
+        Passwaord:<input type="password" name="password" id="">
+        <br>
+        Confirm Passwaord: <input type="password" name="confirmPassword" id="">
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
+
+
+
+
+
+
+    <script>
+        function validateForm() {
+           var password = document.myForm.password.value;
+           var confirmPassword = document.myForm.confirmPassword.value;
+
+           if(password == confirmPassword){
+            return true;
+           }else{
+            document.write("Please enter correct password:")
+            return false;
+           }
+        }
+    </script>
+    <script src="./main.js"></script>
+</body>
+
+</html>

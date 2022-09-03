@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>number Object</title>
+
+</head>
+
+<body>
+    <h1 class="heading">number Object</h1>
+
+    <script>
+        // number
+
+        var x = 2;
+        var y = 2.785;
+        var z = 45e2;
+        var a = new Number(16);
+        document.write("<h2>Javascript constant</h2>")
+        document.write("MIN_VALUE:")
+        document.write("The min number in Js: " + Number.MIN_VALUE);
+        document.write("<br> The max number in Js: " + Number.MAX_VALUE);
+        document.write("<br> The Positive infinity number in Js: " + Number.POSITIVE_INFINITY);
+
+        // check 
+        document.write("<br> NaN: " + Number.NaN);
+        // chcek number or not 'g'
+        document.write("<br> to check 'g': " + Number.isNaN('g'));
+        // to check number 5
+        document.write("<br> NaN: " + Number.isNaN('4'));
+
+
+        // isFinit Method
+        document.write("<h2>isFinite</h2>")
+        document.write("<br> 5 is finite: " + Number.isFinite(5))
+        document.write("<br> 'a' is finite: " + Number.isFinite('a'))
+        document.write("<br> -5 is finite: " + Number.isFinite(-5))
+
+        // infinite
+        document.write("<br> -5 is finite: " + Number.isFinite(Infinity))
+        document.write("<br> 2.5 is finite: " + Number.isFinite(2.5))
+
+        // isInteger
+        document.write("<h2>isInteger</h2>")
+        document.write("<br> 2 is isInteger: " + Number.isFinite(2))
+        document.write("<br> 2 is isInteger: " + Number.isFinite(2))
+        document.write("<br> NaN is isInteger: " + Number.isFinite(NaN))
+
+
+        // parsefloat
+        document.write("<h2>parsefloat</h2>")
+        document.write("convert a '85' to float 85: " + Number.parseFloat('85'))
+        document.write("<br> convert a 'Helllo' to float 85: " + Number.parseFloat('Hello'))
+
+        document.write("<br>convert a '85' to float 85: " + Number.parseInt('85'))
+        document.write("<br>convert a 'Hello' to float 85: " + Number.parseInt('Hello'))
+
+        // exponential
+        document.write("<h2>toExpo</h2>")
+        var a = 2;
+        var b = 5;
+        document.write("convert 2 into expo: " + a.toExponential(2))
+        document.write("<br> convert 2 into expo: " + b.toExponential(5))
+
+        // fixed
+        document.write("<h2>tofixed</h2>")
+        document.write("value of PI: " + Math.PI.toFixed(2))
+
+        // toPrecision 
+        document.write("<h2>toPrecision:</h2>")
+        document.write("value of PI: " + Math.PI.toPrecision(3))
+
+        // toString 
+        document.write("<h2>toString:</h2>")
+        document.write("value of '2'in string: " + a.toString())
+
+
+        var num;
+        num = [2,5,5] ;
+        console.log(num);
+        console.log(num.indexOf(5))
+
+        var str = 'this is cat and mouse';
+        console.log(str.replaceAll(/cat/gi))
+
+
+
+
+       function emp(id, name, roll){
+        this.id=id;
+        this.name=name;
+        this.roll=roll;
+       }
+        
+
+        var e = new emp(1,'sumit',123);
+        for(x in e){
+            console.log(e)
+        }
+
+
+
+
+    </script>
+    <script src="./main.js"></script>
+</body>
+
+</html>

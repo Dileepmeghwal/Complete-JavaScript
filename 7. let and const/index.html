@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables</title>
+
+</head>
+
+<body>
+
+
+
+    <script>
+
+        // vaariable
+        var x = 10;
+        x = 20;
+        console.log(x)
+
+
+
+
+        // global  variiable
+        var a = 40;
+        {
+            console.log(a)
+            var name = "Sony"
+        }
+        console.log(name)
+
+        // function scop
+        var x1 = "ajay"; //call global variable
+        function a() {
+            var x1 = "ajay";
+        }
+        console.log((x1))
+
+        // document.write(a)
+
+        // let
+        let x2 = 300;
+        {
+            let x2 = 100;
+
+            console.log(x2)
+        }
+        console.log(x2)
+
+        let num = 1001;
+        function abc() {
+            let num = 1002;
+            console.log(num)
+        }
+        abc()
+        console.log(num)
+
+        let $num = 10;
+        let $num1 = 10;
+        console.log($num)
+
+
+        // const 
+        const _x = 'ram';
+        const _y = "navmai";
+        console.log(_x.concat(_y))
+
+
+
+        let $x = 'abc';
+        console.log(typeof ($x).includes('a'))
+
+        function max() {
+            let fruit = ['apple', 'mango', 'grapes']
+            
+        }
+        max()
+
+        let fruits = ['apple','mango','banana','grapes']
+
+        function keyValue(a){
+
+            return fruits.findIndex('banana')
+        }
+        let cathc = keyValue()
+        console.log(cathc)
+
+    </script>
+    <script src="./main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Object</title>
+
+</head>
+
+<body>
+    <h1 class="heading">Windows Object</h1>
+
+    <input type="button" value="click me!" onclick="message()">
+    <input type="button" value="click me!" onclick="message1()">
+    <input type="button" value="What's you age ?" onclick="message2()">
+    <input type="button"  value="open me!" onclick="message3()">
+    <input type="button"  value="Time me!" onclick="message4()">
+    <input type="button"  value="close me!" onclick="winClose()">
+
+
+    <script>
+        // window alert
+        function message(){
+            // alert("Hello")
+        }
+        
+        // conform
+        function message1(){
+            var temp = confirm("Are you sure!");
+            if(temp == true){
+                alert("The valye is true");
+            }
+            else{
+                alert("The value is false");
+            }
+        }
+
+
+        // prompt: it take input from user
+
+        function message2(){
+            var age = prompt('Please Enter Your Age:');
+            if(age >= 18){
+                alert("You are adult");
+            }
+            else{
+                alert("you are under 18");
+            }
+
+        }
+
+
+        // open
+
+        function message3(){
+            open('https://www.learnvern.com/');
+        }
+
+        // setTimeout()
+        function message4(){
+            setTimeout(
+                function(){
+                    alert("This is timeOut")
+                },
+                3000
+            );
+        }
+
+        // close
+        function winClose(){
+            close();
+        }
+
+
+    </script>
+    <script src="./main.js"></script>
+</body>
+
+</html>

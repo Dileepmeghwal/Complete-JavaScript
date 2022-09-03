@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+
+</head>
+
+<body>
+    <h1>Array Methods-2</h1>
+
+
+    <script>
+
+        document.write("<h2>Concate():</h2>");
+
+        const arr1 = ['C', 'C++', 'Python', 'Java', 'Java'];
+        const arr2 = ['HTML5', 'CSS3', "JavaScript", "Angular"];
+
+        //1 to perform every() method
+        const arr3 = [50, 35, 40, 55];
+
+        // Multi-diamentional array
+        const arr4 = [11, 12, [13, 14], 15, 16];
+
+
+
+        // fill()
+        document.write("<h2>fill():</h2>");
+
+        const language = ["HTML", "Java", "C"];
+
+        var result = language.fill("javaScript"); //it will replace
+
+        for (value in result) {
+            document.write(result[value])
+        }
+        document.write("<br>")
+        const result1 = language.fill("CSS", 1, 3);
+        document.write(result1);
+
+
+        // from():
+        document.write("<h2>from():</h2>");
+
+
+        const arrFrom = Array.from("Hello");
+        document.write(arrFrom)
+
+
+        var func = function () {
+            document.write(Array.from(arguments));
+        }
+        document.write("<br>")
+        func("HTML", "Java", "C");
+
+
+
+        // filter():
+        document.write("<h2>flter():</h2>");
+
+        const nums = [1, 51, 41, 31, 21, 11];
+
+        function check(value) {
+            return value > 30;
+        }
+        document.write(nums.filter(check));
+
+
+        // find():
+        document.write("<h2>find():</h2>");
+
+        const findArr = nums.find(x => x > 50);
+
+        document.write(findArr)
+
+
+        // findindex():
+        document.write("<h2>findindex():</h2>");
+
+        const findIndexArr = nums.findIndex(x => x > 30);
+
+        document.write(findIndexArr)
+
+
+        // forEach():
+        document.write("<h2>forEach():</h2>");
+
+        const forEachArr = nums.forEach(function (fetch) {
+            document.write(fetch);
+        })
+
+
+    // *******PRACTICE********************
+        const arr10 = ['html', 'css', 'js', 'react'];
+        arr10.fill("Java",[1]);
+        document.write(arr10);
+
+        // from
+
+        const arr0 = Array.from("HEllo");
+        document.write(arr0)
+
+         function funs(){
+            document.write(Array.from(arguments));
+        }
+        funs('Hello', 'Dileep', 'Viny')
+        console.log(funs)
+        
+
+        // filterr
+
+        const range = [1000, 2000, 3000, 5000];
+
+        function price(low){
+            return low > 3000;
+        }
+        document.write(range.filter(price))
+
+        // find
+        document.write("<br>")
+        const r = range.find(x => x > 500)
+        document.write(r)
+
+        // findIndex
+        document.write("<br>")
+        const ifind = range.findIndex(x => x > 1000);
+        document.write("FindIndex: "+ ifind);
+
+
+
+        // forEacah
+
+        document.write("<br>");
+        const forE = range.forEach(function(fetchs){
+            
+            document.write(fetchs + "  ");
+        });
+
+
+    </script>
+
+
+    <script src="./main.js"></script>
+</body>
+
+</html>

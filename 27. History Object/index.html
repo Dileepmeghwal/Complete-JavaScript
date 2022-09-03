@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History Object</title>
+
+</head>
+
+<body>
+    <h1 class="heading">History Object</h1>
+
+   
+    <button type="button" onclick="goBack()">back</button>
+    <button type="button" onclick="goNextpage()">Next</button>
+    <button type="button" onclick="goSpecificPage()">Go to specific page</button>
+    <button type="button" onclick="gotoNextPage()">Go to Next page</button>
+    
+
+
+    <script>
+        document.write("Histroy" +history.length)
+
+
+        // goBack method
+
+        function goBack(){
+            history.back();
+        }
+
+        // goto Next Page
+
+        function goNextpage(){
+            history.forward();
+        }
+
+        // goto specific page
+        function goSpecificPage(){
+            history.go(-2);
+        }
+
+        function gotoNextPage(){
+            history.go(2)
+        }
+    </script>
+    <script src="./main.js"></script>
+</body>
+
+</html>

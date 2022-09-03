@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects Method</title>
+
+</head>
+
+<body>
+
+
+
+    <script>
+        // {
+        //     var x = 'aceess';
+        //     var x = "denied";
+        //     console.log(x)
+
+        // }
+        // console.log(x)
+        // var x = "jai";
+
+        // function aceess() {
+        //     var x = "ram";
+        //     console.log(x)
+        // }
+        // console.log(x)
+        // aceess()
+
+
+        // const a =10;
+        // const b =10;
+
+        // console.log(a)
+
+        // let a = 10;
+
+        // console.log(a)
+
+        // var x = 10;
+        // var y = 10;
+        // var z = 20;
+        // console.log(x < z && x >= y)
+        // console.log(x < z || x < y || x >= z)
+
+
+
+        // methods
+
+        var objects1 = {
+            a: 1,
+            b: 2,
+            c: 5,
+        }
+        var objects2 = {
+            d: 6,
+            e: 8,
+            f: 9,
+        }
+        var assign = Object.assign({ a: 10 });
+        var assign1 = Object.assign({ d: 100, e: 200 })
+        console.log(objects1)
+        console.log(objects2)
+        console.log(assign)
+        console.log(assign1)
+
+
+
+        // create
+        function emp() {
+            this.name = "Nilesh";
+            this.age = 25;
+        }
+        function fun() {
+            emp.call(this)
+        }
+        fun.prototype = Object.create(emp.prototype)
+
+        var ax = new fun();
+        console.log(ax)
+
+        // another way to create object of function
+        function car() {
+            this.brand = "Ford";
+            this.model = 2021;
+        }
+
+        var m = Object.create(car.prototype);
+        var p = new car;
+        console.log(p)
+
+
+        //    freez
+        // var p1 = {
+        //     e1: "raman",
+        //     e2: "sanjay",
+        // }
+        // var p2 = Object.freeze(p1);
+        // p1.e1 = "shyam";
+        // console.log(p2.e1)
+        // var c = Object.isFrozen(p1);
+        // console.log(c)
+
+
+
+
+        // isObject
+        // var a = {
+        //     amount: 1000,
+        // }
+        // var b = {
+        //     amount: 100,
+        // }
+
+        // var c = Object.is(a.amount, b.amount)
+        // console.log(c)
+
+
+        // isSeal
+        var user = {
+            text: 'avadh',
+        }
+        var ex = Object.seal(user);
+        var add = ex.text = "hellon";
+        console.log(ex.text)
+        console.log(Object.isSealed(user))
+
+        delete user.text;
+        console.log(user)
+        console.log(ex)
+        console.log(add)
+
+
+        // value
+        var fruit = ['mango','apple','banana','grapes']
+        var fruits = {
+            fname: "Apple",
+            Protin: '250gm',
+            carfs: "500gm",
+            calories: "700gm",
+        }
+        var list = Object.values(fruits);
+        var mount = Object.keys(fruit)
+        console.log(mount)
+        console.log(list)
+
+
+        var student = {
+            name: "Ajay",
+            roll: 123,
+            std: "5th",
+            age: 13,
+        }
+        console.log(`${student.name}`)
+    </script>
+
+
+    <script src="./main.js"></script>
+</body>
+
+</html>

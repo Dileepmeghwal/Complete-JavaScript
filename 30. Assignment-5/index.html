@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript assignment-5</title>
+
+</head>
+
+<body>
+    <h1 class="heading">JavaScript assignment-5</h1>
+
+   <button onclick="show()">Click</button>
+
+   <button onclick="goback()">Go Back </button>
+   <button onclick="goforwarad()">Go forward </button>
+   <button onclick="goSpecificpage()">Go Specifi page </button>
+    <script>
+
+    // Q.1 
+
+    // var fname = prompt("Enter your Name: ");
+    // var age = prompt("Enter your age: ");
+    // document.write(`${fname} ${age}`)
+
+    // Q.2
+
+    function show(){
+        setTimeout(() => {
+            alert("Hii Dileep")
+        }, 5000);
+    }
+
+    // goback
+    function goback(){
+        history.back();
+    }
+
+    // go forward
+    function goforwarad(){
+        history.forward();
+    }
+
+    function goSpecificpage(){
+        history.go(2);
+    }
+
+
+    // Navigator
+    
+    document.write("Browser Name: "+navigator.appName + "<br>")
+    document.write("Browser Version: "+ navigator.appVersion + "<br>")
+    document.write("cookie enabled: "+ navigator.cookieEnabled + "<br>")
+    document.write("Intalled pugins: "+ navigator.plugins + "<br>")
+    document.write("User agent: "+ navigator.userAgent + "<br>")
+
+
+
+    // screen
+
+    document.write("Screen width: "+ screen.width + "<br>")
+    document.write("Screen width: "+  + "<br>")
+    </script>
+
+
+    
+   
+
+
+
+    <script src="./main.js"></script>
+</body>
+
+</html>

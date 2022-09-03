@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementsByName</title>
+</head>
+<body>
+        
+    <!--getElementsByName  -->
+
+    <form action="#">
+        Male: <input type="radio" name="gender" id="">
+        Female: <input type="radio" name="gender" id="">
+        <br>
+
+        <button onclick="showGender()">Click</button>
+    </form>
+
+    <script>
+
+        function showGender(){
+            var x = document.getElementsByName('gender');
+            alert(x.length)
+            alert(x[0].innerText)
+        }
+    </script>
+</body>
+</html>

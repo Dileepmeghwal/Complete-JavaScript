@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment-7 Form Validation</title>
+
+    <style>
+        body{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .wrapper {
+            border: 1px solid #999;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .input__field{
+            padding: 0.4rem 1rem;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h2>Form Validation</h2>
+
+    <form action="#" name="myForm" onsubmit="vaildation()">
+        <div class="wrapper">
+            <div class="input__field">
+                <label for="#">Name:</label>
+                <input type="text" name="fname" id="">
+                <span id="alert1"></span>
+            </div>
+            <div class="input__field">
+                <label for="#">Last Name:</label>
+                <input type="text" name="lname" id="">
+                <span id="alert2"></span>
+            </div>
+            <div class="input__field">
+                <label for="#">Email:</label>
+                <input type="text" name="email" id="">
+                <span id="alert3"></span>
+            </div>
+            <div class="input__field">
+                <label for="#">Telephone:</label>
+                <input type="text" name="telephone" id="">
+                <span id="alert4"></span>
+            </div>
+            <div class="input__field">
+                <label for="#">Password:</label>
+                <input type="text" name="password" id="">
+                <span id="alert5"></span>
+            </div>
+            <div class="input__field">
+                <label for="#">Confirm Passwaord:</label>
+                <input type="text" name="cpassword" id="">
+                <span id="alert6"></span>
+            </div>
+
+            <br>
+
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+
+
+
+
+
+
+    <!-- javascript validation -->
+    <script>
+        function vaildation(){
+            var name = document.myForm.fname.value;
+            var lname = document.myForm.lname.value;
+            var email = document.myForm.email.value;
+            var atposition = email.indexOf('@');
+            var dotposition = email.indexOf('.');
+            var telephone = document.myForm.telephone.value;
+            var password = document.myForm.password.value;
+            var confirmPassword = document.myForm.cpassword.value;
+
+
+            
+            if(name,lname == null || name,lname == ""){
+                document.getElementById('alert1').innerHTML = "Please Fill Input filed";
+                document.getElementById('alert2').innerHTML = "Please Fill Input filed";
+                return false;
+            }
+            else if (isNaN(name)){
+                alert("please Enter char value")
+                return false;
+            }
+            else if(atposition<1 ||dotposition<atposition+2){
+                document.getElementById('alert3').innerHTML = "Please Enter valid email";
+                return false;
+            }
+            else if(isNaN(telephone)){
+                
+                alert("correct your number")
+                return false;
+            }else if(telephone.length<10){
+                
+                alert("Enter correct phone:")
+                return false
+            }else if(password == confirmPassword){
+                return true;
+            }else{
+                alert("please check your password")
+
+            }
+
+            
+        }
+    </script>
+</body>
+
+</html>

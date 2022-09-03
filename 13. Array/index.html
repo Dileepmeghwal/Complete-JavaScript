@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+
+</head>
+
+<body>
+    <h1>Array</h1>
+
+
+    <script>
+
+        document.write("<h2>Array Literal</h2>");
+
+        // Create array using Literal
+
+        const user = ['ajay', 'vinit', 'akshay', 'sunil'];
+
+        // for(let i=0; i<=user.length -1; i++){
+        //     document.write(user[i] + "<br>")
+        // }
+
+        for (value in user) {
+            document.write("<li>" + user[value] + "<br>")
+        }
+
+        // for(value of user){
+        //     document.write(value)
+        // }
+
+
+
+
+        // Create Array using new Keyword
+
+        document.write("<h2>Create Array using new Keyword</h2>")
+        const fruits = new Array();
+        fruits[0] = "Apple";
+        fruits[1] = "Banana";
+        fruits[2] = "Grapes";
+
+        for (let i = 0; i <= fruits.length - 1; i++) {
+            document.write("<li>" + fruits[i] + "<br>")
+        }
+
+
+        // Create Array using Constructor
+
+        document.write("<h2>Create Array using Constructor</h2>")
+
+        const car = new Array("BMW", "Mercy", "Verna", "Volvo");
+
+        for (value of car) {
+            document.write("<li>" + value + " <br>")
+        }
+
+
+
+
+
+
+
+
+
+
+        // Practice for array
+
+        // literal array
+        const friend = ['Raju', 'amit', 'ashu', 'nirmal'];
+
+        for (x in friend) {
+            document.write(friend[x] + " <br>")
+        }
+
+        // Using new Keyword
+
+        const arr1 = new Array();
+        arr1[0] = "Dileep";
+        arr1[1] = "Meghwal";
+        arr1[2] = 23;
+        arr1[3] = "abc@hotmail.com";
+
+        document.write(arr1 + "<br>")
+        for (x in arr1) {
+            document.write(arr1[x] + "<br>")
+        }
+
+
+        // Using Constructor
+
+        const arr2 = new Array('ajay', 'devgan', 'kajol');
+
+        for (data of arr2) {
+            document.write(data + " ")
+        }
+
+
+
+        // Litreal Array
+        // var dost = ['raju','ashu','amit','amit']
+        // // console.log(dost)
+        // for(values in dost){
+        //     console.log(dost[values])
+        // }
+        // for(valu of dost){
+        //     console.log(valu)
+        // }
+        // var a1 = [1,2,3,4,5,6]
+        // for(value of a1){
+        //     console.log(value)
+        // }
+        // for(value in a1){
+        //     console.log(a1[value])
+        // }
+        // var str = {
+        //     id: 121,
+        //     name: "Rohan"
+        // }
+        // for(value in str){
+        //     console.log(str[value])
+        // }
+
+
+        // new kyword Instace array
+        var $arr = new Array();
+        $arr[0] = "Amit";
+        $arr[1] = "Ashu";
+        $arr[2] = "Raju";
+        $arr[3] = "Ishu";
+
+        for (value in $arr){
+            console.log($arr[value])
+        }
+
+
+        // constructor Array
+
+        var food = new Array('pizza','burger','idaly','dhosa','vhisal-pav');
+            console.log(food)
+            for(value in food){
+                console.log(food[value])
+            }
+
+
+
+
+
+
+
+    </script>
+
+
+    <script src="./main.js"></script>
+</body>
+
+</html>

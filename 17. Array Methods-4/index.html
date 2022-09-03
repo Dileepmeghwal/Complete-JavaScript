@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+
+</head>
+
+<body>
+    <h1>Array Methods-4</h1>
+
+
+    <script>
+
+        // Of()
+        document.write("<h2>of():</h2>");
+
+        document.writeln("Array Generated using of: " + Array.of(1, 5, 8, 9));
+        
+        console.log(Array.of(1, "Hello", 8, 9))
+
+        // it convert into Array
+        document.write(Array.of("Dow"))
+        console.log(Array.of("doe", 'jump'))
+
+        document.write("<br>");
+
+        const abs = [10,20,30,40];
+        const newAbs = Array.of(23)
+        document.write(newAbs);
+
+        // push()
+        document.write("<h2>push():</h2>");
+
+        const arr1 = [1, 2, 4, 5];
+        arr1.push(10)
+        arr1.push(100);
+        document.write("Push 10 in arr1: " + arr1)
+
+        // pop()
+        document.write("<h2>Pop():</h2>");
+
+        const arr2 = [1,2,4,5,6];
+        arr2.pop(6)
+        arr2.pop(5)
+        document.write(arr2)
+
+        
+        // reverse()
+        document.write("<h2>reverse():</h2>");
+
+        document.write(arr2.reverse())
+
+
+        // reduce(function(initial, accumulator))
+        document.write("<h2>push():</h2>");
+
+        const sum = [5,9, 4, 2];
+        const x = sum.reduce(function(accumulator, currentValue){
+            return accumulator - currentValue;
+        })
+        document.write(x)
+
+        // Some()
+
+        document.write("<br>")
+        document.write("<h2>some():</h2>")
+
+
+        // some Function for value check
+        const newArr = [55, 50,45,34,23];
+
+        function valuCheck(arguments){
+            return arguments > 23;
+        }
+
+        const fetch = newArr.some(valuCheck);
+        document.write(fetch)
+
+        // shift()
+        document.write("<br>")
+        document.write("<h2>shift():</h2>")
+
+        document.write(newArr.shift() + "<br>");
+
+        document.write(newArr)
+
+
+        // slice()
+        document.write("<br>")
+        document.write("<h2>slice():</h2>")
+
+        const list = [2,4,6,8,1,3,5,7];
+        const result = list.slice(4,6);
+        document.write("Sliced: " + result)
+
+
+
+
+        document.write("<br>")
+
+        const a1 = [12,3,4,5];
+        const a2 = [20,30,34,40];
+
+        function vChek(arg){
+            return arg > 30;
+        }
+        let rst = a1.every(x => x>4);
+        document.write(rst)
+        
+
+        
+
+ 
+    </script>
+
+
+    <script src="./main.js"></script>
+</body>
+
+</html>

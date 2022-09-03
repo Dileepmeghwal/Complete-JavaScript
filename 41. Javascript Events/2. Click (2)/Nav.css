@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display&family=Inter:wght@400;500;600&family=Jost:wght@100;200;300;400;500;600;700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,300;1,400;1,700&family=Oswald:wght@700&family=Raleway:wght@100;200;300;400;500;600&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Jost', sans-serif;
+}
+
+header{
+    background-color: #000000;
+}
+li{
+    list-style-type: none;
+}
+a{
+    color: #fff;
+    text-decoration: none;
+}
+.navbar{
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+}
+.nav-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+.nav-branding{
+    font-size: 2rem;
+    font-family: 'Bebas Neue', cursive;
+}
+.nav-link{
+    transition: 0.7s ease;
+}
+.nav-link:hover{
+    color: dodgerblue;
+}
+
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+.color{
+    color: blue;
+}
+.bar{
+    display: block;
+    width: 22px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #fff;
+    position: relative;
+    top: 6px;
+}
+
+@media screen and (max-width: 768px){
+    .hamburger{
+        display: block;
+        border: 2px solid #fff;
+        border-radius: 100%;
+        width: 45px;
+        height: 45px;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+        transform: translateX(-25px);
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-menu{
+        position: fixed;
+        right: -100%;
+        top: 70px;
+        background-color: #000000;
+        gap: 0;
+        flex-direction: column;
+        width: 50%;
+        height: 100vh;
+        text-align: center;
+        transition: 0.553s;
+    }
+
+    .nav-item{
+        margin: 16px 0;
+    }
+    .nav-menu.active{
+        right: 0;
+    }
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript AddEventListner ()</title>
+
+</head>
+
+<body>
+    <!-- <h1 class="heading">Javascript AddEventListner ()</h1> -->
+
+    <button id="demo" onclick="bgChange(); updateLine1(); updateLine2()">Click</button>
+
+    <p id="line1"></p>
+    <p id="line2"></p>
+
+    <script>
+        // javascript classs
+        // document.write("<h3>Javascript AddEventListner ()</h3>")
+
+        document.getElementById('demo').addEventListener('click', bgChange);
+        document.getElementById('demo').addEventListener('click', updateLine1);
+        document.getElementById('demo').addEventListener('click', updateLine2);
+
+        function bgChange(){
+            document.body.style.backgroundColor = 'red';
+        }
+        function updateLine1(){
+            document.getElementById('line1').innerHTML = "Welcome to lernvern";
+        }
+        function updateLine2(){
+            document.getElementById('line2').innerHTML = "Welcome to JavaScript.";
+        }
+  
+    </script>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+
+</head>
+
+<body>
+    <h1>Array Methods-3</h1>
+
+    
+    <script>
+        // include
+
+        const arr1 = ['C', 'C++', 'Python', 'Java','Java'];
+        const arr2 = ['HTML5', 'CSS3', "JavaScript", "Angular"];
+
+        
+        const add = arr2.includes("Angular");
+        document.write(add);
+
+        // indexOf
+        document.write("<br>")
+        document.write(arr1.indexOf("C++"))
+        document.write("<br>")
+
+        document.write(arr2.indexOf("JavaScript"))
+
+        // isArray
+        const o = {id:1,user:"abc"}; //Object Check is array or not
+        document.write("<br>")
+
+        document.write(Array.isArray(arr1))
+        document.write("<br>")
+
+        document.write(Array.isArray(o))
+
+        // Join
+
+        document.write(arr1.join("// //"))
+
+        // key
+
+        const keyTry = arr1.keys();
+        for(x of arr1){
+            document.write(x)
+        }
+        document.write("<br>")
+        
+        // lastIndex();
+
+        const lIndex = arr1.lastIndexOf("Python");
+        document.write(lIndex)
+        document.write("<br>")
+
+
+        document.write("<br>")
+        // map();
+
+        const arrs = [10, 20, 30, 40];
+
+        const result = arrs.map(x => x/2);
+        for(x in result){
+            document.write(result[x] + " ")
+        }
+        // document.write(result);
+
+        const police = ['Rajasthan', 'Maharastra', 'Mumbai', 'Up'];
+        const newPolice = police.map(x => police);
+        document.write(newPolice[x])
+
+        
+
+        
+        
+    </script>
+
+
+    <script src="./main.js"></script>
+</body>
+
+</html>

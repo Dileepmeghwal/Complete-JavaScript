@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objects</title>
+  </head>
+
+  <body>
+    <script>
+      var moniter = {
+        version: 7.233,
+        HDD: "1TB",
+        brand: "Acer",
+        RAM: "1TB",
+      };
+      console.log(`${moniter.version}`);
+
+      // instance
+
+      var object2 = new Object();
+      object2.id = 1;
+      object2.name = "dileep";
+      object2.course = "B.tech";
+      for (x in object2) {
+        console.log(object2[x]);
+      }
+
+      // constructuor
+    //   function emp(id, name, salary) {
+    //     this.id = id;
+    //     this.name = name;
+    //     this.salary = salary;
+
+    //     this.updateSalary = updateSalary;
+
+    //     function updateSalary(newSalary) {
+    //       this.salary = newSalary;
+    //     }
+    //   }
+    //   var e = new emp(101, "Denial", 24);
+    //   document.write(`${e.id} ${e.name} ${e.age}`);
+    //   e.updateSalary(45000);
+    //   document.write(e.updateSalary);
+
+     
+
+    function employee (id, name, age, salary){
+        this.id= id;
+        this.name= name;
+        this.age= age;
+        this.salary = salary;
+
+        // methos appply
+        this.newSalary= newSalary;
+
+        function newSalary(amount){
+            this.salary = amount;
+        }
+    }
+
+    var ex = new employee(100, "Karan Signh", 34, 25000);
+    document.write("ID: " +ex.id + "<br>Name: " + ex.name+ "<br> Age: " + ex.age+ "<br> Salary: " + ex.salary)
+    ex.newSalary(450000)
+    document.write("<br> Updated Salary: "+ex.salary)
+
+
+
+    function graj(brand, model, color){
+        this.brand = brand;
+        this.model = model;
+        this.color = color;
+
+        this.newBrand = newBrand;
+
+        function newBrand(element){
+            return this.brand = element;
+        }
+    }
+    var m ="mahindra";
+    var newGaraj = new graj("BMW", 2022, "Black");
+    console.log(newGaraj);
+    document.write("<br>I have a "+ `${m} `+ newGaraj.newBrand("THAR") +" Model "+ newGaraj.model +" "+ newGaraj.color)
+    
+    
+    
+
+
+
+
+
+    </script>
+
+    <script src="./main.js"></script>
+  </body>
+</html>

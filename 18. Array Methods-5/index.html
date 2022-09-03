@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+
+</head>
+
+<body>
+    <h1>Array Methods-5</h1>
+
+
+    <script>
+
+        // Sort()
+        document.write("<h2>sort():</h2>");
+
+        const num = [8, 6, 5, 3, 2, 8];
+
+        const languages = ['HTML', 'CSS', 'Java', 'Bootstrap'];
+
+        document.write("Sorted Array: " + num.sort());
+        document.write(" // Find min num: " + Math.min.apply(null, num))
+        document.write(" // Find max num: " + Math.max.apply(null, num))
+
+        document.write("<br>")
+        document.write(languages.sort());
+
+
+        // check min num
+        // const x = Math.min.apply(null, num);
+        // document.write(x)
+
+        // splice() : array.splice(start, delete...element)
+        document.write("<h2>Splice():</h2>");
+        
+        const days = ["Monday", "Tue", "Thu", "Fri", "Sat"];
+
+        // add wednesday
+        const addNewDay = days.splice(2,0,"Wed");
+        document.write("Week Day: " + days)
+        document.write("<br>" + days)
+        // remove wednesday
+        const removeDay = days.splice(2,2,'Sun');
+        document.write("<br>" + days)
+        document.write("<br>"+ removeDay)
+        
+
+
+        // toLocalString()
+        document.write("<h2>toLocalString():</h2>");
+
+         const week = ["Monday", "Tue", "wed","Thu", "Fri", "Sat"];
+         const str = week.toLocaleString(); //it convert aray in to string
+         document.write(str);
+         console.log(week) 
+
+        //  convert date 
+        const time = ['a',1, new Date("8 Jan 1998 17:35:00 UTC" )];
+        const x = time.toLocaleString('en', {timeZone: "UTC"});
+        
+        console.log(x)
+        
+        // toString()
+        document.write("<h2>toString():</h2>");
+
+        document.write(week.toString());
+        
+
+
+        // unShiift()
+        document.write("<h2>unShift():</h2>");
+        // document.write(week.shift())
+        const count = [2,4,5,6,7]
+        const a = count.unshift(10) //it add value at begining
+        document.write(count)
+
+
+        // Value()
+        document.write("<h2>value():</h2>");
+
+        const ans = ['ajay','bunny', 'cherry', 'dom']
+        const v= ans.values()
+        // document.write(v)
+        // console.log(v)
+        for(val of ans){
+            document.writeln(val + "<br>")
+        }
+
+
+
+    </script>
+
+
+    <script src="./main.js"></script>
+</body>
+
+</html>

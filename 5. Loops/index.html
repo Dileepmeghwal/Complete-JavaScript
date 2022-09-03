@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Loops</title>
+
+</head>
+
+<body>
+
+    <!-- for loop -->
+
+    <script>
+        // for (var i = 1; i <= 5; i++) {
+        //     for (var j = 1; j <= i; j++) {
+        //         document.write("*");
+        //     }
+        //     document.writeln("<br />")
+        // }
+
+        // let y = 10;
+        // let x = 10;
+
+        // let str = "";
+
+        // for (let i = 1; i < y; i++) {
+        //     for (let j = 1; j < x; j++) {
+        //         if (i + j >= y) {
+        //             str = str.concat("*");
+        //         } else {
+        //             str = str.concat(" ")
+        //         }
+        //     }
+        //     str = str.concat("<br />")
+        // }
+        // document.write(str)
+        document.write("<h3>for loop</h3>")
+
+        let i;
+        for (i = 0; i <= 10; i++) {
+            document.write(i + "<br />")
+        }
+
+        // while
+        document.write("<h3>while loop</h3>")
+
+        var j = 0;
+        while (j <= 10) {
+            document.write(j)
+            j++;
+        }
+
+        // do...while
+        document.write("<h3>do...while loop</h3>")
+        var a = 20;
+        do {
+            document.write(a + "<br>");
+
+            a++;
+        } while (a <= 20);
+
+        // for in
+        document.write("<h3>for in loop</h3>")
+        var x = [1, 2, 3, 4, 5];
+        for (value in x) {
+            document.write(x[value]);
+        }
+        var x1 = x.indexOf(2)
+        var x2 = x.includes(5)
+        document.write("<br> index value of 2: " + x1)
+        document.write("<br> is 5 include in array: " + x2)
+
+        var y = ['apple', 'bannan','grapes','mango']
+        for(value of y){
+            document.write("<br>" + value)
+        }
+
+    </script>
+
+
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
